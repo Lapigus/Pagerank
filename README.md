@@ -1,7 +1,7 @@
 # Pagerank
 
 ## run pig script
-pig PigPagerank.py <vertices file> <edges file> <number of iteration>
+<code>pig PigPagerank.py \<vertices file\> \<edges file\> \<number of iteration\><code>
 
 ## run spark script
-spark-submit pagerank.py <edges file> <number of iteration>
+<code>spark-submit pagerank.py \<edges file\> \<number of iteration\><code>
