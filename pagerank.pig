@@ -15,9 +15,9 @@ contributions = foreach joined generate id1, id2, (float)rank/cnt as contribs;
 -- group by url and get theirs contributors with theirs contributions
 cogrouped = cogroup vertex by id, contributions by id2;
 
-neighbors = foreach cogrouped generate group, flatten(vertex.url), contributions.(id1, contribs) as c; 
+neighbors = foreach cogrouped generate group, flatten(vertex.url), contributions.(id1, contribs) as c;
 
-new_ranks = foreach neighbors generate group, 0.15 + 0.85 * SUM(c.contribs); 
+new_ranks = foreach neighbors generate group, 0.15 + 0.85 * SUM(c.contribs);
 
 fs -rmr myoutput;
 store new_ranks into 'myoutput';
