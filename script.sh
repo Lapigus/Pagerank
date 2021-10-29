@@ -14,7 +14,7 @@ echo "execution PIG terminée"
 #spark
 rm tempsSPARK.tsv
 BEFORE=$SECONDS
-spark-submit pagerank.py edges 2
+spark-submit gs://$1/pagerank.py gs://$1/data/edges 2
 ELAPSED=$(($SECONDS-$BEFORE))
 echo -e "${ELAPSED}" >> tempsSPARK.tsv
 echo "execution SPARK terminée"
