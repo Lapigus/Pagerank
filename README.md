@@ -1,5 +1,11 @@
 # Pagerank
 
+Augustin Herve
+
+Gurvan Le Meur
+
+Carol Couillerot
+
 ## run pig script
 pig PigPagerank.py \<vertices file\> \<edges file\> \<number of iteration\>
 
